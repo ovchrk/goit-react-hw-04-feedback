@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Section } from "./Section";
 import { Statistics } from './Statistics';
 import { FeedbackOptions } from "./Feedbackoptions";
@@ -14,7 +14,6 @@ const App = () => {
 
   const handleFeedback = (e) => {
     const { name } = e.target;
-    console.log(name);
 
     switch (name) {
       case 'good': setGood(state => state + 1); break;
@@ -23,7 +22,6 @@ const App = () => {
       default: alert('Не знайдено потрібних значень.')
     }
   }
-  
   
   
   return (<div>
